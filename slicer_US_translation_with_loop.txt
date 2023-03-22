@@ -1,0 +1,21 @@
+#https://www.slicer.org/wiki/Documentation/Nightly/ScriptRepository#Load_volume_from_file
+#https://www.slicer.org/wiki/Documentation/Nightly/ScriptRepository#Center_the_3D_View_on_the_Scene
+###
+
+import glob
+import os
+directory = 'C:/Users/mastelin/Downloads/20230209_ Test/20230209_ Test'
+file_type = '.mhd'
+
+for file in glob.glob(directory+ '/*' + file_type):
+	name = os.path.split(file)[1][:-4]
+	sceneSaveFilename = directory+'/'+name+ '.mrb'
+	loadedVolumeNode = slicer.util.loadVolume(file)
+	#save as .mrb
+	slicer.util.saveScene(sceneSaveFilename)
+	slicer.mrmlScene.Clear(0)
+
+
+
+
+
