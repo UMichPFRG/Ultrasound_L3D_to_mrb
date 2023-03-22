@@ -20,4 +20,13 @@ This converts all .l3d files in a folder
     - Create linear transform
     -	Change: LR to 90  AND PA to 90
     - Harden transform
+    
+## Notes
+1. **Highly suggest** the conversion is not done on your original files, but on a copy of the original files (that you discard after the conversion)
 
+2. The probe size used in this conversion was defined for our needs. After conversion into 3D Slicer ensure the scalling is correct for your project.
+(Change probe size in line 97).
+
+## Questions?
+1. Add it to the issues OR
+2. Email Mariana at mastelin@umich.edu
